@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview_plus/device_preview_plus.dart';
+import 'package:musehub/pages/library_page.dart';
 
 void main() {
   runApp(
@@ -14,15 +15,3 @@ void main() {
     ),
   );
 }
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('MuseHub Home Page')),
-    );
-  }
-}
-

@@ -1,0 +1,1 @@
+//Page to define a persistent mini-player
