@@ -6,6 +6,14 @@ class LibraryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Library',
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+      ),
       body: Text('The Library Page'),
     );
   }

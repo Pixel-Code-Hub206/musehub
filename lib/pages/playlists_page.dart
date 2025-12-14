@@ -6,6 +6,14 @@ class PlaylistsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Playlists',
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+      ),
       body: Text('Playlists are listed here!'),
     );
   }

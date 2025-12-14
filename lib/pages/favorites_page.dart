@@ -6,6 +6,14 @@ class FavoritesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Favorites',
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+      ),
       body: Text('Favorites Page!'),
     );
   }

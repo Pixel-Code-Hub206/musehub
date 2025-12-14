@@ -26,16 +26,9 @@ class _MuseHubRootState extends State<MuseHubRoot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Root File',
-          style: TextStyle(
-            fontSize: 24,
-          ),
-        ),
-      ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
 
         selectedItemColor: Colors.greenAccent,
