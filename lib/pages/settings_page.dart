@@ -14,15 +14,17 @@ class SettingsPage extends StatelessWidget {
           ),
         ),
       ),
+
       body: ListView(
         children: <Widget>[
+          SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
             child: Text(
                 'Appearance',
               style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -33,19 +35,25 @@ class SettingsPage extends StatelessWidget {
               print('Toggle theme tapped!');
             },
           ),
+          SizedBox(height: 8),
 
+          Divider(
+            color: Colors.black,
+          ),
+
+          SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
             child: Text(
               'Audio',
               style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack_outlined),
+            leading: Icon(Icons.play_arrow_outlined),
             title: Text('Gapless playback'),
             onTap: () {
               print('Uses a switch!');
@@ -59,20 +67,26 @@ class SettingsPage extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack_outlined),
+            leading: Icon(Icons.lens_blur_outlined),
             title: Text('CrossFade Duration'),
             onTap: () {
               print('Leads to another page!');
             },
           ),
+          SizedBox(height: 8),
 
+          Divider(
+            color: Colors.black,
+          ),
+
+          SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
             child: Text(
               'Library',
               style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -84,53 +98,64 @@ class SettingsPage extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack_outlined),
+            leading: Icon(Icons.art_track_outlined),
             title: Text('Clear cached artwork'),
             onTap: () {
               print('Dialog (Confirmation)');
             },
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack_outlined),
+            leading: Icon(Icons.screen_search_desktop_sharp),
             title: Text('Choose scan directories'),
             onTap: () {
               print('New Page');
             },
           ),
+          SizedBox(height: 8),
 
+          Divider(
+            color: Colors.black,
+          ),
+
+          SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
             child: Text(
               'Playback',
               style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.volume_up_outlined),
+            leading: Icon(Icons.play_arrow),
             title: Text('Continue from last played track'),
             onTap: () {
               print('Playback Controls tapped!');
             },
           ),
           ListTile(
-            leading: Icon(Icons.volume_up_outlined),
+            leading: Icon(Icons.play_arrow_outlined),
             title: Text('Auto-play next track'),
             onTap: () {
               print('Playback Controls tapped!');
             },
           ),
+          SizedBox(height: 8),
 
+          Divider(
+            color: Colors.black,
+          ),
 
+          SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
             child: Text(
               'App Info',
               style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w400,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -142,14 +167,14 @@ class SettingsPage extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack_outlined),
+            leading: Icon(Icons.person),
             title: Text('Developer Link'),
             onTap: () {
               print('External Link');
             },
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack_outlined),
+            leading: Icon(Icons.info),
             title: Text('App Version : v0.1.0 (alpha)'),
           ),
         ],
