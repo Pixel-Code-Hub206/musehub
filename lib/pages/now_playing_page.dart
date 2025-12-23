@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:musehub/models/song_model.dart';
 import 'package:just_audio/just_audio.dart';
 
 class NowPlayingPage extends StatefulWidget {
-  const NowPlayingPage({super.key});
+  final Song song;
+  const NowPlayingPage({super.key, required this.song});
 
   @override
   State<NowPlayingPage> createState() => _NowPlayingPageState();
@@ -21,8 +23,9 @@ class _NowPlayingPageState extends State<NowPlayingPage> {
   }
 
   Future<void> _init() async{
-    await _player.setAsset('assets/audio/testTrack.mp3');
-    final duration = await _player.setAsset('assets/audio/testTrack.mp3');
+    await _player.setFilePath(widget.song.path);
+    await _player.play();
+    final duration = await _player.setFilePath(widget.song.path);
     print('duration: $duration');
   }
 

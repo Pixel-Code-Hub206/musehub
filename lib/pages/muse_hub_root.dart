@@ -1,5 +1,6 @@
 //The first page to land in after the splash screen
 import 'package:flutter/material.dart';
+import 'package:musehub/models/song_model.dart';
 import 'package:musehub/pages/favorites_page.dart';
 import 'package:musehub/pages/library_page.dart';
 import 'package:musehub/pages/now_playing_page.dart';
@@ -19,7 +20,7 @@ class _MuseHubRootState extends State<MuseHubRoot> {
   final List<Widget> _screens = [
     LibraryPage(),
     FavoritesPage(),
-    NowPlayingPage(),
+    NowPlayingPage(song: Song(path: '', songName: '')),   //Empty arguments to avoid sync errors
     SettingsPage()
   ];
 
