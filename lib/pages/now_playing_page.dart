@@ -1,12 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
-class NowPlayingPage extends StatelessWidget {
+class NowPlayingPage extends StatefulWidget {
   const NowPlayingPage({super.key});
+
+  @override
+  State<NowPlayingPage> createState() => _NowPlayingPageState();
+}
+
+class _NowPlayingPageState extends State<NowPlayingPage> {
+
+  final AudioPlayer _player = AudioPlayer();
+  bool isPlaying = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _init();
+  }
+
+  Future<void> _init() async{
+    await _player.setAsset('assets/audio/testTrack.mp3');
+    final duration = await _player.setAsset('assets/audio/testTrack.mp3');
+    print('duration: $duration');
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _player.dispose();
+    super.dispose();
+  }
+
+  void togglePlay() async{
+    if(isPlaying){
+      await _player.play();
+    }
+    else{
+      await _player.pause();
+    }
+    setState(() {
+      isPlaying = !isPlaying;       //Changing the state internally.
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Now playings songs'),
+      appBar: AppBar(
+        title: Text("Now Playing"),
+
+      ),
+      body: IconButton(onPressed: togglePlay,
+          icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow_outlined))
     );
   }
 }

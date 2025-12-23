@@ -19,7 +19,7 @@ class _MuseHubRootState extends State<MuseHubRoot> {
   final List<Widget> _screens = [
     LibraryPage(),
     FavoritesPage(),
-    PlaylistsPage(),
+    NowPlayingPage(),
     SettingsPage()
   ];
 
